@@ -19,8 +19,10 @@ Do the following:
 
    HINT: no function required
 */
-
-
+const votingAge = 19;
+if (votingAge >= 18){
+  console.log(true);
+}
 
 /*
 Task 1b - Values (not auto tested)
@@ -33,10 +35,12 @@ Do the following:
 
    HINT: no function required
 */
-
-
-
-
+let firstThing = 10;
+const secondThing = 10;
+if (firstThing === secondThing){
+    firstThing = "flower";
+}
+console.log(firstThing);
 
 /*
 Task 1c - Convert Strings to Numbers (not auto tested)
@@ -48,10 +52,8 @@ Do the following:
 
    HINT: look up the Number method
 */
-
-
-
-
+let year = "1999";
+console.log(Number(year));
 /*
 Task 1d - Multiply
  
