@@ -147,11 +147,11 @@ function hungryDog(weight, age){
       return weight * 0.03;
     } else if(age >= 1 && weight > 15){
       return weight * 0.02;
-    } else if(age > 0.33 && age < 1) {
+    } else if(age >= 0.583 && age < 1) {
       return weight * 0.04;
-    } else if(age <= 0.58 && age >= 0.33) {
+    } else if(age < 0.583 && age >= 0.333) {
       return weight * 0.05;
-    } else if(age <= 0.33){
+    } else if(age < 0.333){
       return weight * 0.10;
     } else { 
       return 'please enter your dog\'s info again';
@@ -193,22 +193,17 @@ if (computerRandom === 3){
 console.log("computer choice:", computerRandom);
 
 function game(userChoice, computerRandom){
-  if (userChoice === "rock" && computerRandom === "paper") {
-    return "you lose";
-  } else if (userChoice === "paper" && computerRandom === "scissors") {
-    return "you lose";
-  } else if (userChoice === "scissors" && computerRandom === "rock") {
-    return "you lose";
-  } else if (userChoice === "rock" && computerRandom === "scissors") {
-    return "you win";
-  } else if (userChoice === "paper" && computerRandom === "rock") {
-    return "you win";
-  } else if (userChoice === "scissors" && computerRandom === "paper") {
-    return "you win";
-  } else {
+  if (userChoice === computerRandom){
     return "it's a tie";
+  } else if (userChoice === "rock" && computerRandom === "paper") {
+    return "you lose!";
+  } else if (userChoice === "paper" && computerRandom === "scissors") {
+    return "you lose!";
+  } else if (userChoice === "scissors" && computerRandom === "rock") {
+    return "you lose!";
+  } else {
+    return "you win!";
   }
-  
 }
 
 console.log("task 4:", game("rock", computerRandom));
@@ -221,15 +216,15 @@ console.log("task 4:", game("rock", computerRandom));
 /*
 Using the miles function below do the following:
 1. Receive a number of kilometers
-2. Convert the number of kiolmeters received to miles
+2. Convert the number of kilometers received to miles
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(kilometers){
+  return (kilometers * 0.621371);
 }
 
-
+console.log("task 5a:", miles(3));
 
 //Task 5b - Centimeters to Feet
 /*
@@ -239,10 +234,11 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(centimeters){
+  return (centimeters / 30.48);
 }
 
+console.log("task 5b:", feet(120));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -258,12 +254,16 @@ Using the annoyingSong function below do the following:
 3. Outside of the function, Make a loop that invokes annoying song with a number that decreases until it gets to 1 bottle left. 
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
+let bottleNumber = 0;
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(bottleNumber){
+  return `${bottleNumber} bottles of soda on the wall, ${bottleNumber} bottles of soda, take one down pass it around ${bottleNumber - 1} bottles of soda on the wall`;
 }
 
-
+while (bottleNumber > 1){
+  console.log('task 6:', annoyingSong(99));
+}
+ 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Grade Calculator
