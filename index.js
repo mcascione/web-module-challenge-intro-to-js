@@ -309,12 +309,13 @@ HINT - you may need to study tomorrow's content on arrays
 HINT - try looking up the .includes() method
 */
 
-let vowels = ["a", "e", "i", "o", "u"]
-let vowelCount = 0;
-
 function vowelCounter(string) {
+  const vowels = ["a", "e", "i", "o", "u"];
+  let vowelCount = 0;
+
   for(let i = 0; i < string.length; i++) {
-    if (string.toLowerCase().includes(vowels[i])){
+    const currentCharacter = string[i].toLowerCase();
+    if (vowels.includes(currentCharacter)){
       vowelCount++;
     }
   }
@@ -322,7 +323,7 @@ function vowelCounter(string) {
   return vowelCount;
 }
 
-vowelCounter('PlaY');
+vowelCounter('fleetIng');
 
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
