@@ -180,11 +180,38 @@ Use the game function below to do the following:
 
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
+let computerRandom = Math.floor((Math.random() * 3) + 1);
 
-function game(user, computer){
-  /*add your code here*/
+if (computerRandom === 3){
+  computerRandom = "rock";
+} else if (computerRandom === 2){
+  computerRandom = "paper";
+} else {
+  computerRandom = "scissors";
 }
 
+console.log("computer choice:", computerRandom);
+
+function game(userChoice, computerRandom){
+  if (userChoice === "rock" && computerRandom === "paper") {
+    return "you lose";
+  } else if (userChoice === "paper" && computerRandom === "scissors") {
+    return "you lose";
+  } else if (userChoice === "scissors" && computerRandom === "rock") {
+    return "you lose";
+  } else if (userChoice === "rock" && computerRandom === "scissors") {
+    return "you win";
+  } else if (userChoice === "paper" && computerRandom === "rock") {
+    return "you win";
+  } else if (userChoice === "scissors" && computerRandom === "paper") {
+    return "you win";
+  } else {
+    return "it's a tie";
+  }
+  
+}
+
+console.log("task 4:", game("rock", computerRandom));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
