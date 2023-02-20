@@ -309,11 +309,20 @@ HINT - you may need to study tomorrow's content on arrays
 HINT - try looking up the .includes() method
 */
 
+let vowels = ["a", "e", "i", "o", "u"]
+let vowelCount = 0;
 
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
+function vowelCounter(string) {
+  for(let i = 0; i < string.length; i++) {
+    if (string.toLowerCase().includes(vowels[i])){
+      vowelCount++;
+    }
+  }
+  console.log("task stretch:", vowelCount);
+  return vowelCount;
 }
 
+vowelCounter('PlaY');
 
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
